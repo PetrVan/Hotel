@@ -5,4 +5,10 @@ public class Guest {
     private String lastName;
     private LocalDate birthdate;
 
+    public Guest(String firstName, String lastName, LocalDate birthdate){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthdate = birthdate;
+    }
+
 }

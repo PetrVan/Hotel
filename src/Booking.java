@@ -3,5 +3,13 @@ import java.time.LocalDate;
 public class Booking {
     private LocalDate start;
     private LocalDate end;
-    private boolean typeOfVacation;
+    private boolean typeOfVacationWork;
+
+    public Booking(LocalDate start, LocalDate end, boolean typeOfVacationWork){
+        this.start = start;
+        this.end = end;
+        this.typeOfVacationWork = typeOfVacationWork;
+    }
+
+
 }
