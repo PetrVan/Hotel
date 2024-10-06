@@ -1,9 +1,13 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+
 
 public class Guest {
     private String firstName;
     private String lastName;
     private LocalDate birthdate;
+
 
     public Guest(String firstName, String lastName, LocalDate birthdate){
         this.firstName = firstName;
@@ -34,4 +38,9 @@ public class Guest {
     public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
     }
+
+    public String extractDate(){
+       return birthdate.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
+    }
+
 }

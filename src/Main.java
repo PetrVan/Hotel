@@ -3,7 +3,6 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.ArrayList;
 
-
 public class Main {
     public static void main(String[] args) {
         Guest guest1 = new Guest("Adéla", "Malíková", LocalDate.of(1993, 3, 13));
@@ -13,7 +12,8 @@ public class Main {
         guestList.add(guest1);
         guestList.add(guest2);
         for(Guest guest : guestList){
-            System.out.println(guest.getFirstName() + " " + guest.getLastName() + " " + guest.getBirthdate());
+
+            System.out.println(guest.getFirstName() + " " + guest.getLastName() + " (" + guest.extractDate() +")");
         }
 
         Room room1 = new Room(1, 1, BigDecimal.valueOf(1000), true,true);

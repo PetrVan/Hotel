@@ -20,6 +20,10 @@ public class Booking {
         otherGuests.add(guest);
     }
 
+    public Booking(Guest guest, Room room, boolean typeOfVacationWork){
+        this(guest, room, LocalDate.now(), LocalDate.now().plusDays(6), typeOfVacationWork);
+    }
+
     public LocalDate getStart() {
         return start;
     }
