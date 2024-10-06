@@ -15,5 +15,43 @@ public class Room {
         this.isSeaView = isSeaView;
     }
 
+    public int getNumberOfRoom() {
+        return numberOfRoom;
+    }
 
+    public void setNumberOfRoom(int numberOfRoom) {
+        this.numberOfRoom = numberOfRoom;
+    }
+
+    public int getNumberOfBeds() {
+        return numberOfBeds;
+    }
+
+    public void setNumberOfBeds(int numberOfBeds) {
+        this.numberOfBeds = numberOfBeds;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public boolean isTerrace() {
+        return isTerrace;
+    }
+
+    public void setTerrace(boolean terrace) {
+        isTerrace = terrace;
+    }
+
+    public boolean isSeaView() {
+        return isSeaView;
+    }
+
+    public void setSeaView(boolean seaView) {
+        isSeaView = seaView;
+    }
 }
