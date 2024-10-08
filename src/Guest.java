@@ -4,17 +4,31 @@ import java.time.format.FormatStyle;
 
 
 public class Guest {
+    /**
+     * String fistName - jméno hosta
+     */
     private String firstName;
+    /**
+     * String lastName - příjmení hosta
+     */
     private String lastName;
+    /**
+     *  LocalDate birthdate - Datum narození hosta
+     */
     private LocalDate birthdate;
 
-
+    /**
+     * Vytvoří instanci třídy Guest
+     * @param firstName Jméno hosta
+     * @param lastName Příjmení hosta
+     * @param birthdate Narozeniny hosta
+     */
     public Guest(String firstName, String lastName, LocalDate birthdate){
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthdate = birthdate;
     }
-
+    // Gettry a settry
     public String getFirstName() {
         return firstName;
     }
@@ -39,8 +53,12 @@ public class Guest {
         this.birthdate = birthdate;
     }
 
-    public String extractDate(){
-       return birthdate.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
+    /**
+     * Metoda pro Výpis celého jména a datumu narození
+     * @return Jméno příjmení a (datum narození)
+     */
+    public String getDescription(){
+        return firstName + " " + lastName + " " + "(" + birthdate.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM)) + ")";
     }
 
 }

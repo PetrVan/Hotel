@@ -1,12 +1,35 @@
 import java.math.BigDecimal;
 
 public class Room {
+    /**
+     * int numberOfRoom - číslo pokoje
+     */
     private int numberOfRoom;
+    /**
+     *  int numberOfBeds - počet postelí na jednom pokoji
+     */
     private int numberOfBeds;
+    /**
+     * Cena pokoje
+     */
     private BigDecimal price;
+    /**
+     * Pokoj s balkénem
+     */
     private boolean isTerrace;
+    /**
+     * Pokoj s výhledem na moře
+     */
     private boolean isSeaView;
 
+    /**
+     * Vytvoří instanci objektu pokoje
+     * @param nubmerOfRoom číslo pokoje
+     * @param numberOfBeds počet postelí na pokoji
+     * @param price cena pokoje
+     * @param isTerrace pokoj s balkónem
+     * @param isSeaView pokoj s výhledem na moře
+     */
     public Room(int nubmerOfRoom, int numberOfBeds, BigDecimal price, boolean isTerrace, boolean isSeaView ){
         this.numberOfRoom = nubmerOfRoom;
         this.numberOfBeds = numberOfBeds;
@@ -14,7 +37,7 @@ public class Room {
         this.isTerrace = isTerrace;
         this.isSeaView = isSeaView;
     }
-
+    // Gettry a settry
     public int getNumberOfRoom() {
         return numberOfRoom;
     }
